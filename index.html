@@ -1,108 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <base href="">
-    <title>BU BİR UYARIDIR!</title>
-    <link href="https://fonts.googleapis.com/css?family=Righteous|Poppins&display=swap" rel="stylesheet">
-    <style type="text/css">
-        body {
-            background: url(https://i.hizliresim.com/nfwo1d3.gif) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            background-blend-mode: screen;
-            background-color: black;
-            cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur686.cur), progress !important;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        @font-face {
-            font-family: 'Righteous', cursive;
-        }
-        
-        div {
-            text-shadow: 2px 2px 4px #000000;
-        }
-        
-        a {
-            text-decoration: none;
-        }
-        
-        .warning {
-            color: white;
-            font-size: 17pt;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        .message {
-            color: white;
-            font-size: 25px;
-            font-family: 'Righteous', cursive;
-        }
-        
-        .note {
-            color: #F7202F;
-            font-size: 15pt;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        .thanks {
-            color: white;
-            font-size: 13pt;
-            font-family: 'Righteous', cursive;
-        }
-    </style>
-    <link rel="icon" href="https://www.iconsdb.com/icons/preview/red/skull-32-xxl.png" type="image/png">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HACKED BY FSOCİETY</title>
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    overflow: hidden;
+    background: black;
+    color: #0f0;
+    font-family: monospace;
+    user-select: none;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  #matrix {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background: black;
+    filter: blur(0.5px);
+  }
+  #hacked-text {
+    font-size: 5vw;
+    margin-bottom: 15px;
+    animation: blink 1.5s infinite;
+    z-index: 10;
+  }
+  #hacked-img {
+    max-width: 320px;
+    max-height: 180px;
+    width: 80vw;
+    height: auto;
+    z-index: 10;
+  }
+  #marquee {
+    white-space: nowrap;
+    animation: marquee 5s linear infinite;
+    font-size: 3vw;
+    color: #0f0;
+    padding-left: 100%;
+    margin-top: 15px;
+    z-index: 10;
+  }
+  #social-links {
+    margin-top: 25px;
+    z-index: 10;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+  .social-btn {
+    background: #0f0;
+    color: black;
+    font-weight: bold;
+    font-family: monospace;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.8vw;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s;
+    user-select: none;
+  }
+  .social-btn:hover {
+    background: #00ff00cc;
+  }
+  .social-icon {
+    width: 1.6em;
+    height: 1.6em;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  @keyframes blink {
+    0%, 50%, 100% {opacity: 1;}
+    25%, 75% {opacity: 0.4;}
+  }
+</style>
 </head>
-<body onclick="playAudio();" class="">
-    <center>
-        <img width="280" height="280" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1280px-HD_transparent_picture.png">
-    
-        <div class="warning">
-            <b>Owned By <font color="#F7202F">Root Mrx & Root Exa & Root Anubis & Root Amon</font></b>
-        </div>
-        <br>
+<body oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
 
-        </div>
-        <div class="message">
-            Admin site leğene döndü amk kapat şu açıkları
-        </div>
-        <br><br>
-        <div class="note">
-            <b>Bundan Sonra Daha Dikkatli Olmanız Dilegiyle...</b>
-        </div><br>
-        <div class="thanks">
-            <b>Thx To: Suzikisan, Syrox & ROOT FAMİLY & ASAYİŞ FAMİLY</b>
-        </div><br><br>
-        <a href="#">
-            <img width="37" height="37" src="https://img.icons8.com/?size=512&id=32309&format=png&color=FFFFFF">
-        </a>
-        <a href="#">
-            <img width="37" height="37" src="https://img.icons8.com/?size=512&id=F4ZPUh2Mk5tk&format=png&color=FFFFFF">
-        </a> 
-    </center>
-    
-    <audio autoplay="autoplay" loop="loop" id="lagu" src="https://e.top4top.io/m_3128b58sx1.mp3"></audio>
+<canvas id="matrix"></canvas>
 
-    <audio id="sec" idm_id="823202817">
-    
-        <source src="https://e.top4top.io/m_3128b58sx1.mp3" type="audio/mpeg">
-      
-        </audio>
-      
-      <script>
-      
-      var x = document.getElementById("sec");
-      
-      function playAudio() {
-      
-      x.play();
-      
-      }
-      </script>
+<div id="hacked-text">HACKED BY FSOCIETY</div>
+<img id="hacked-img" src="https://i.hizliresim.com/kaxdxmw.png" alt="FSOCIETY Logo" />
+<div id="marquee">HACKED BY RootNetOfGods TEAM</div>
+
+<div id="social-links">
+  <a class="social-btn" href="https://t.me/RootNetOfGods" target="_blank" rel="noopener noreferrer" aria-label="Telegram Kanalı">
+    <svg class="social-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.5 3L1.5 11.25l5.25 1.5 1.5 5.25 3-3 5.25 3 3-15z"/></svg>
+    Telegram
+  </a>
+  <a class="social-btn" href="https://www.instagram.com/fsociety.hack" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profili">
+    <svg class="social-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+    Instagram
+  </a>
+</div>
+
+<!-- İstiklal Marşı YouTube videosu, gizli ve otomatik -->
+<iframe 
+  width="0" height="0" 
+  src="https://www.youtube.com/embed/Y75Km7dlt94?autoplay=1&loop=1&playlist=Y75Km7dlt94&controls=0&mute=0" 
+  title="İstiklal Marşı" frameborder="0" 
+  allow="autoplay" 
+  allowfullscreen></iframe>
+
+<script>
+// MATRIX EFEKTI
+const canvas = document.getElementById('matrix');
+const ctx = canvas.getContext('2d');
+
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight;
+
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZÇŞİÖÜĞ0123456789@#$%^&*()";
+const fontSize = 16;
+const columns = Math.floor(width / fontSize);
+
+let drops = [];
+for(let x = 0; x < columns; x++)
+  drops[x] = Math.random() * height;
+
+function draw() {
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+  ctx.fillRect(0, 0, width, height);
+
+  ctx.font = fontSize + "px monospace";
+
+  for(let i = 0; i < drops.length; i++) {
+    let text = letters.charAt(Math.floor(Math.random() * letters.length));
+    if (Math.random() > 0.9) {
+      ctx.fillStyle = '#aaffaa';
+    } else {
+      ctx.fillStyle = '#0f0';
+    }
+    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+    if(drops[i] * fontSize > height && Math.random() > 0.975) {
+      drops[i] = 0;
+    }
+    drops[i]++;
+  }
+}
+
+setInterval(draw, 50);
+
+// Sağ tıklama, seçim ve kopyalamayı engelle
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('dragstart', e => e.preventDefault());
+
+// Sayfa yeniden boyutlandığında canvas güncelle
+window.addEventListener('resize', () => {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+});
+</script>
+
 </body>
 </html>
