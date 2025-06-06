@@ -1,87 +1,108 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hacked By Aizent</title>
-  <style>
-    @keyframes flicker {
-      0% {
-        opacity: 1;
-        text-shadow: 0 0 10px red;
-      }
-      100% {
-        opacity: 0.6;
-        text-shadow: 0 0 20px red;
-      }
-    }
-    #aizent-overlay {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.95);
-      z-index: 999999;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: red;
-      user-select: none;
-    }
-    #aizent-overlay h1 {
-      font-family: monospace;
-      font-size: 60px;
-      animation: flicker 2s infinite alternate;
-      margin: 0 0 30px 0;
-    }
-    #aizent-overlay img {
-      width: 150px;
-      filter: drop-shadow(0 0 5px red);
-      margin-bottom: 30px;
-    }
-    #aizent-overlay iframe {
-      width: 640px;
-      height: 360px;
-      border: none;
-      filter: drop-shadow(0 0 10px red);
-      border-radius: 15px;
-    }
-    @media (max-width: 700px) {
-      #aizent-overlay iframe {
-        width: 90vw;
-        height: calc(90vw * 9 / 16);
-      }
-    }
-  </style>
+    <base href="">
+    <title>BU BİR UYARIDIR!</title>
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Poppins&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body {
+            background: url(https://i.hizliresim.com/nfwo1d3.gif) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-blend-mode: screen;
+            background-color: black;
+            cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur686.cur), progress !important;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        @font-face {
+            font-family: 'Righteous', cursive;
+        }
+        
+        div {
+            text-shadow: 2px 2px 4px #000000;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .warning {
+            color: white;
+            font-size: 17pt;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .message {
+            color: white;
+            font-size: 25px;
+            font-family: 'Righteous', cursive;
+        }
+        
+        .note {
+            color: #F7202F;
+            font-size: 15pt;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .thanks {
+            color: white;
+            font-size: 13pt;
+            font-family: 'Righteous', cursive;
+        }
+    </style>
+    <link rel="icon" href="https://www.iconsdb.com/icons/preview/red/skull-32-xxl.png" type="image/png">
 </head>
-<body>
-  <script>
-    if (!document.getElementById('aizent-overlay')) {
-      // Overlay container
-      const overlay = document.createElement('div');
-      overlay.id = 'aizent-overlay';
+<body onclick="playAudio();" class="">
+    <center>
+        <img width="280" height="280" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1280px-HD_transparent_picture.png">
+    
+        <div class="warning">
+            <b>Owned By <font color="#F7202F">Root Mrx & Root Exa & Root Anubis & Root Amon</font></b>
+        </div>
+        <br>
 
-      // Flag image
-      const flag = document.createElement('img');
-      flag.src = 'https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg';
-      flag.alt = 'Türk Bayrağı';
+        </div>
+        <div class="message">
+            Admin site leğene döndü amk kapat şu açıkları
+        </div>
+        <br><br>
+        <div class="note">
+            <b>Bundan Sonra Daha Dikkatli Olmanız Dilegiyle...</b>
+        </div><br>
+        <div class="thanks">
+            <b>Thx To: Suzikisan, Syrox & ROOT FAMİLY & ASAYİŞ FAMİLY</b>
+        </div><br><br>
+        <a href="#">
+            <img width="37" height="37" src="https://img.icons8.com/?size=512&id=32309&format=png&color=FFFFFF">
+        </a>
+        <a href="#">
+            <img width="37" height="37" src="https://img.icons8.com/?size=512&id=F4ZPUh2Mk5tk&format=png&color=FFFFFF">
+        </a> 
+    </center>
+    
+    <audio autoplay="autoplay" loop="loop" id="lagu" src="https://e.top4top.io/m_3128b58sx1.mp3"></audio>
 
-      // Hacked text
-      const h1 = document.createElement('h1');
-      h1.innerText = 'HACKED BY AİZENT';
-
-      // YouTube video iframe (İstiklal Marşı)
-      const iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube.com/embed/Y75Km7dlt94?autoplay=1&mute=0&loop=1&playlist=Y75Km7dlt94';
-      iframe.allow = 'autoplay; encrypted-media';
-      iframe.allowFullscreen = true;
-
-      // Append all
-      overlay.appendChild(flag);
-      overlay.appendChild(h1);
-      overlay.appendChild(iframe);
-      document.body.appendChild(overlay);
-    }
-  </script>
+    <audio id="sec" idm_id="823202817">
+    
+        <source src="https://e.top4top.io/m_3128b58sx1.mp3" type="audio/mpeg">
+      
+        </audio>
+      
+      <script>
+      
+      var x = document.getElementById("sec");
+      
+      function playAudio() {
+      
+      x.play();
+      
+      }
+      </script>
 </body>
-</h
-  tml>
+</html>
