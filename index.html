@@ -1,174 +1,172 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr-TR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>HACKED BY FSOCİETY</title>
-<style>
-  html, body {
-    margin: 0; padding: 0;
-    overflow: hidden;
-    background: black;
-    color: #0f0;
-    font-family: monospace;
-    user-select: none;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  #matrix {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-    background: black;
-    filter: blur(0.5px);
-  }
-  #hacked-text {
-    font-size: 5vw;
-    margin-bottom: 15px;
-    animation: blink 1.5s infinite;
-    z-index: 10;
-  }
-  #hacked-img {
-    max-width: 320px;
-    max-height: 180px;
-    width: 80vw;
-    height: auto;
-    z-index: 10;
-  }
-  #marquee {
-    white-space: nowrap;
-    animation: marquee 5s linear infinite;
-    font-size: 3vw;
-    color: #0f0;
-    padding-left: 100%;
-    margin-top: 15px;
-    z-index: 10;
-  }
-  #social-links {
-    margin-top: 25px;
-    z-index: 10;
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-  }
-  .social-btn {
-    background: #0f0;
-    color: black;
-    font-weight: bold;
-    font-family: monospace;
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1.8vw;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: background 0.3s;
-    user-select: none;
-  }
-  .social-btn:hover {
-    background: #00ff00cc;
-  }
-  .social-icon {
-    width: 1.6em;
-    height: 1.6em;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="𝙷𝙰𝙲𝙺𝙴𝙳 𝙱𝚈  FSOCİETY">
+    <title>𝙷𝙰𝙲𝙺𝙴𝙳 𝙱𝚈 FSOCİETY</title>
 
-  @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
-  @keyframes blink {
-    0%, 50%, 100% {opacity: 1;}
-    25%, 75% {opacity: 0.4;}
-  }
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        * { 
+            overflow: hidden; 
+            margin: 0;
+            padding: 0;
+        }
+        html { 
+            height: 100%; 
+        }
+        body {
+            font-family: 'VT323', monospace;
+            background: #000;
+            color: #00ff00;
+            margin: 0;
+            position: relative;
+        }
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #ff00ff;
+            font-family: 'VT323', monospace;
+            font-size: 2.5vmin;
+            text-shadow: 0 0 10px #ff00ff;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+        }
+        video#back {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 105%;
+            min-height: 105%;
+            transform: translateX(-50%) translateY(-50%) rotate(5deg);
+            filter: brightness(1.2) contrast(1.1); /* Daha parlak ve net */
+            z-index: -1;
+        }
+        #main {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: table;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Arka planı biraz daha şeffaf yaparak video öne çıksın */
+            z-index: 1;
+        }
+        .fof {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .fof h1 {
+            margin: 20px 0;
+        }
+        h2 {
+            font-size: 2.5vmin;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+            margin: 10px 0;
+        }
+        h2 a {
+            color: #00ccff;
+            text-decoration: none;
+            text-shadow: 0 0 5px #00ccff;
+        }
+        h2 a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 15px #ff00ff;
+        }
+        .hacker-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .hacker-rain::before {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            color: #00ff00;
+            font-family: 'VT323', monospace;
+            font-size: 2vmin;
+            opacity: 0.2;
+            animation: rain-fall 5s linear infinite;
+            white-space: nowrap;
+            text-shadow: 0 0 5px #00ff00;
+        }
+        .hacker-rain::after {
+            content: "";
+            position: absolute;
+            top: -150%;
+            left: 20%;
+            width: 100%;
+            height: 200%;
+            color: #ff00ff;
+            font-family: 'VT323', monospace;
+            font-size: 1.8vmin;
+            opacity: 0.15;
+            animation: rain-fall 7s linear infinite;
+            white-space: nowrap;
+            text-shadow: 0 0 5px #ff00ff;
+        }
+
+        /* Animasyon */
+        @keyframes rain-fall {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(150vh); }
+        }
+    </style>
 </head>
-<body oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
+<body onclick="unmuteee()">
+    <div id="anchor" onclick="unmuteee()"></div>
+    <div class="hacker-rain"></div>
+    <video onclick="unmuteee()" loop autoplay muted preload="none" id="back" x-webkit-airplay="allow" webkit-playsinline playsinline>
+        <source src="https://berofc.org.tr/ssstik.io_@dreamscored.ae_1748061848057.mp4" type="video/mp4">
+    </video>
+    <div id="main" onclick="unmuteee()">
+        <div class="fof" onclick="unmuteee()">
+            <h1><font size="5" style="color: red; text-shadow: 0px 1px 6px; background:url('https://i.hizliresim.com/q8029t1.gif');">𝙷𝙰𝙲𝙺𝙴𝙳 𝙱𝚈  FSOCİETY/font></h1>
+            <h2><a href="https://t.me/Jyxlorzirve">Telegram : RootNEtofGOD</a></h2>
+            <h2>Güvenlik açıklarını kapat. Hacklendin :)</h2>
+            <h2>Savaşmazsan kazanamazsın</h2>
+            <br>
+            <font size="5">TURKISH HACKERS WERE HERE</font>
+        </div>
+    </div>
 
-<canvas id="matrix"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var video = $('video');
+        (function ($) {
+            $(document).ready(function () {
+                var figure = $(".fof").hover(hoverVideo);
+                var figureq = $("body").hover(hoverVideo);
+                var figures = $("#main").hover(hoverVideo);
+                var figurep = $("*").hover(hoverVideo);
 
-<div id="hacked-text">HACKED BY FSOCIETY</div>
-<img id="hacked-img" src="https://i.hizliresim.com/kaxdxmw.png" alt="FSOCIETY Logo" />
-<div id="marquee">HACKED BY RootNetOfGods TEAM</div>
+                function hoverVideo(e) {
+                    setTimeout(function () {
+                        $('video').get(0).play();
+                        console.log('played');
+                    }, 30000);
+                };
+            });
+        })(jQuery);
 
-<div id="social-links">
-  <a class="social-btn" href="https://t.me/RootNetOfGods" target="_blank" rel="noopener noreferrer" aria-label="Telegram Kanalı">
-    <svg class="social-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.5 3L1.5 11.25l5.25 1.5 1.5 5.25 3-3 5.25 3 3-15z"/></svg>
-    Telegram
-  </a>
-  <a class="social-btn" href="https://www.instagram.com/fsociety.hack" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profili">
-    <svg class="social-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
-    Instagram
-  </a>
-</div>
-
-<!-- İstiklal Marşı YouTube videosu, gizli ve otomatik -->
-<iframe 
-  width="0" height="0" 
-  src="https://www.youtube.com/embed/Y75Km7dlt94?autoplay=1&loop=1&playlist=Y75Km7dlt94&controls=0&mute=0" 
-  title="İstiklal Marşı" frameborder="0" 
-  allow="autoplay" 
-  allowfullscreen></iframe>
-
-<script>
-// MATRIX EFEKTI
-const canvas = document.getElementById('matrix');
-const ctx = canvas.getContext('2d');
-
-let width = canvas.width = window.innerWidth;
-let height = canvas.height = window.innerHeight;
-
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZÇŞİÖÜĞ0123456789@#$%^&*()";
-const fontSize = 16;
-const columns = Math.floor(width / fontSize);
-
-let drops = [];
-for(let x = 0; x < columns; x++)
-  drops[x] = Math.random() * height;
-
-function draw() {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
-  ctx.fillRect(0, 0, width, height);
-
-  ctx.font = fontSize + "px monospace";
-
-  for(let i = 0; i < drops.length; i++) {
-    let text = letters.charAt(Math.floor(Math.random() * letters.length));
-    if (Math.random() > 0.9) {
-      ctx.fillStyle = '#aaffaa';
-    } else {
-      ctx.fillStyle = '#0f0';
-    }
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-    if(drops[i] * fontSize > height && Math.random() > 0.975) {
-      drops[i] = 0;
-    }
-    drops[i]++;
-  }
-}
-
-setInterval(draw, 50);
-
-// Sağ tıklama, seçim ve kopyalamayı engelle
-document.addEventListener('contextmenu', e => e.preventDefault());
-document.addEventListener('copy', e => e.preventDefault());
-document.addEventListener('selectstart', e => e.preventDefault());
-document.addEventListener('dragstart', e => e.preventDefault());
-
-// Sayfa yeniden boyutlandığında canvas güncelle
-window.addEventListener('resize', () => {
-  width = canvas.width = window.innerWidth;
-  height = canvas.height = window.innerHeight;
-});
-</script>
-
+        function unmuteee() {
+            $("video").prop('muted', false);
+        }
+    </script>
 </body>
 </html>
