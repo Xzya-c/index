@@ -1,149 +1,78 @@
 <!DOCTYPE html>
 <html lang="tr-TR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="𝙷𝙰𝙲𝙺𝙴𝙳 𝙱𝚈  FSOCİETY">
-    <title>𝙷𝙰𝙲𝙺𝙴𝙳 𝙱𝚈 FSOCİETY</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Orbitron:wght@700&display=swap" rel="stylesheet">
-
-    <style>
-        * { overflow: hidden; margin: 0; padding: 0; }
-        html, body { height: 100%; background: black; }
-        body {
-            font-family: 'VT323', monospace;
-            color: #00ff00;
-        }
-        video#back {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            min-width: 105%;
-            min-height: 105%;
-            transform: translate(-50%, -50%) rotate(5deg);
-            filter: brightness(1.2) contrast(1.1);
-            z-index: -1;
-        }
-        #main {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-            flex-direction: column;
-        }
-        h1 {
-            font-size: 4vmin;
-            color: red;
-            background: url('https://i.hizliresim.com/q8029t1.gif');
-            text-shadow: 0 1px 6px;
-        }
-        h2 {
-            font-size: 2.5vmin;
-            color: #00ff00;
-            text-shadow: 0 0 10px #00ff00;
-            margin: 10px 0;
-        }
-        h2 a {
-            color: #00ccff;
-            text-decoration: none;
-            text-shadow: 0 0 5px #00ccff;
-        }
-        h2 a:hover {
-            color: #ff00ff;
-            text-shadow: 0 0 15px #ff00ff;
-        }
-        .hacker-rain {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-        .hacker-rain::before {
-            content: "";
-            position: absolute;
-            top: -100%;
-            width: 100%;
-            height: 200%;
-            color: #00ff00;
-            font-family: 'VT323', monospace;
-            font-size: 2vmin;
-            opacity: 0.2;
-            animation: rain-fall 5s linear infinite;
-            white-space: nowrap;
-            text-shadow: 0 0 5px #00ff00;
-        }
-        .hacker-rain::after {
-            content: "";
-            position: absolute;
-            top: -150%;
-            left: 20%;
-            width: 100%;
-            height: 200%;
-            color: #ff00ff;
-            font-family: 'VT323', monospace;
-            font-size: 1.8vmin;
-            opacity: 0.15;
-            animation: rain-fall 7s linear infinite;
-            white-space: nowrap;
-            text-shadow: 0 0 5px #ff00ff;
-        }
-
-        @keyframes rain-fall {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(150vh); }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>HACKED BY FSOCIETY</title>
+  <meta name="description" content="You have been hacked admin. Turkish Hackers were here.">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      font-family: 'VT323', monospace;
+      color: #00ff00;
+      overflow: hidden;
+    }
+    video#back {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 110%;
+      min-height: 110%;
+      transform: translate(-50%, -50%) rotate(5deg);
+      filter: brightness(1.2) contrast(1.1);
+      z-index: -1;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    h1 {
+      font-size: 4vmin;
+      color: red;
+      background: url('https://i.hizliresim.com/q8029t1.gif') center center no-repeat;
+      background-size: contain;
+      text-shadow: 0 1px 6px #f00;
+    }
+    h2 {
+      font-size: 2.5vmin;
+      text-shadow: 0 0 10px #00ff00;
+      margin: 10px 0;
+    }
+    a {
+      color: #00ccff;
+      text-decoration: none;
+      text-shadow: 0 0 5px #00ccff;
+    }
+    a:hover {
+      color: #ff00ff;
+      text-shadow: 0 0 15px #ff00ff;
+    }
+  </style>
 </head>
-<body onclick="unmuteee()">
-    <script>
-        // Sayfa içeriğini tamamen temizle
-        document.documentElement.innerHTML = "";
-        document.documentElement.style.cssText = `
-            margin:0;
-            overflow:hidden;
-            background:#000;
-            color:#0f0;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            font-family:monospace;
-            text-align:center;
-            user-select:none;
-        `;
-        document.title = 'HACKED BY FSOCIETY';
+<body>
+  <video id="back" autoplay loop muted playsinline>
+    <source src="https://berofc.org.tr/ssstik.io_@dreamscored.ae_1748061848057.mp4" type="video/mp4">
+  </video>
 
-        let main = document.createElement('div');
-        main.innerHTML = `
-            <video autoplay loop muted id="back" style="
-                position:fixed;
-                top:50%;
-                left:50%;
-                min-width:105%;
-                min-height:105%;
-                transform:translate(-50%, -50%) rotate(5deg);
-                filter: brightness(1.2) contrast(1.1);
-                z-index:-1;">
-                <source src="https://berofc.org.tr/ssstik.io_@dreamscored.ae_1748061848057.mp4" type="video/mp4">
-            </video>
-
-            <h1 style="background:url('https://i.hizliresim.com/q8029t1.gif'); color:red; text-shadow:0px 1px 6px;">𝙷𝙰𝙲𝙺𝙴𝙳 𝙱𝚈 FSOCİETY</h1>
-            <h2><a href="https://t.me/anonminea">Telegram : FSOCİETY HACK TEAM</a></h2>
-            <h2>You have been hacked admin :)</h2>
-            <h2>PLS UPGRADE YOUR SYSTEM</h2>
-            <br>
-            <h2>TURKISH HACKERS WERE HERE</h2>
-        `;
-        document.body.appendChild(main);
-    </script>
+  <div class="overlay">
+    <h1>𝙷𝙰𝙲𝙺𝙴𝙳 𝙱𝚈 FSOCİETY</h1>
+    <h2><a href="https://t.me/anonminea">Telegram : FSOCİETY HACK TEAM</a></h2>
+    <h2>You have been hacked admin :)</h2>
+    <h2>PLS UPGRADE YOUR SYSTEM</h2>
+    <br>
+    <h2>TURKISH HACKERS WERE HERE</h2>
+  </div>
 </body>
 </html>
